@@ -1,0 +1,32 @@
+research_task:
+  description: >
+    Realize uma pesquisa aprofundada sobre {content} no contexto de {topic}. 
+    Identifique os avanços mais recentes, tendências emergentes e informações relevantes.
+    Sua pesquisa servirá como base para uma publicação na rede social {social_network}.
+  agent: researcher
+  expected_output: >
+    Um relatório detalhado contendo os principais achados sobre {content} no contexto de {topic},
+    incluindo fontes relevantes, dados e descobertas que possam ser úteis para criar
+    uma publicação impactante na rede social {social_network}.
+
+reporting_task:
+  description: >
+    Com base na pesquisa realizada, crie uma publicação otimizada para {social_network} 
+    sobre {content} no contexto de {topic}.  
+    Adapte o conteúdo para que pareça autêntico, humano e engajador.  
+    Utilize storytelling, linguagem acessível e um tom que ressoe com o público da rede social {social_network}.  
+    Se aplicável, inclua perguntas para incentivar a interação, chamadas para ação e sugestões de elementos visuais.  
+    No final da publicação, inclua uma sugestão de descrição de imagem que complemente o conteúdo.  
+  agent: reporting_analyst
+  expected_output: >
+    O resultado deve estar no formato de um arquivo Markdown (.md), estruturado da seguinte forma:
+
+    # Publicação  
+    {texto_gerado_da_publicação}  
+
+    ---
+
+    **🖼️ Descrição da Imagem:**  
+    {descrição_sugerida_para_a_imagem}
+
+  dependencies: [research_task]
