@@ -8,7 +8,6 @@ from .crew import PublifyApi
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
-
 def run(topic, content, social_network):
     """
     Run the crew with a topic and specific content.
@@ -21,7 +20,7 @@ def run(topic, content, social_network):
     }
     
     try:
-        PublifyApi().crew().kickoff(inputs=inputs)
+        result = PublifyApi().crew().kickoff(inputs=inputs)
+        return result  # agora retorna o conteúdo gerado
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
-
