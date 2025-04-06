@@ -1,25 +1,17 @@
-# Imagem base
 FROM python:3.11-slim
 
-# Setar diretório de trabalho
 WORKDIR /app
 
-# Copiar arquivos do projeto
 COPY . .
 
-# Instalar Poetry
-RUN pip install poetry
+RUN pip install --upgrade pip \
+ && pip install -r requirements.txt \
+ && pip install uvicorn \ 
+ && pip install fastapi \
+ && pip install crewai
 
-# Instalar dependências do projeto com Poetry
-RUN poetry config virtualenvs.create false \
- && poetry install --no-root
+RUN which uvicorn  # debug opcional
 
-# Instalar uvicorn diretamente (caso Poetry falhe)
-RUN pip install uvicorn
-RUN pip install fastapi
-
-# Expor a porta usada pela FastAPI
 EXPOSE 8000
 
-# Comando para rodar o servidor
 CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
