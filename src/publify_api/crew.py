@@ -59,6 +59,6 @@ class PublifyApi():
             process=Process.sequential,
             verbose=True,
             memory=True,  
-            max_rpm=50,
+           
             # process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
         )
