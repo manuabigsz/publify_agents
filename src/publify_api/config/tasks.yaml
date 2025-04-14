@@ -1,34 +1,33 @@
 research_task:
   description: >
-    Realize uma pesquisa aprofundada sobre {content} no contexto de {topic}. 
-    Identifique os avanços mais recentes, tendências emergentes e informações relevantes.
-    A pesquisa deve considerar o público-alvo ({target_public}) e o tom desejado ({tone}).
-    O resultado servirá como base para uma publicação na rede social {social_network}.
+    Mergulhe no universo de {content} dentro de {topic} e descubra o que está movimentando esse tema! 
+    Busque avanços recentes, tendências que chamem atenção e histórias que possam encantar o público ({target_public}). 
+    Pense em como essas informações podem brilhar em uma publicação para {social_network}, com um tom {tone} que conecte e engaje.
   agent: researcher
   expected_output: >
-    Um relatório detalhado contendo os principais achados sobre {content} no contexto de {topic},
-    incluindo fontes relevantes, dados e descobertas que possam ser úteis para criar
-    uma publicação impactante na rede social {social_network}. O conteúdo deve considerar 
-    o tom desejado ({tone}) e as características do público-alvo ({target_public}).
+    Um resumo vibrante com os principais destaques sobre {content} em {topic}, 
+    incluindo histórias cativantes, dados curiosos e fontes confiáveis. 
+    O conteúdo deve ser fácil de transformar em uma publicação para {social_network}, 
+    já considerando o tom {tone} e as preferências do público ({target_public}).
 
 reporting_task:
   description: >
-    Com base na pesquisa realizada, crie uma publicação otimizada para {social_network} 
-    sobre {content} no contexto de {topic}.  
-    Adapte o conteúdo para que pareça autêntico, humano e engajador.  
-    Utilize storytelling, linguagem acessível e um tom que ressoe com o público da rede social {social_network} ({tone}).  
-    Se aplicável, inclua perguntas para incentivar a interação, chamadas para ação e sugestões de elementos visuais.  
-    No final da publicação, inclua uma sugestão de descrição de imagem que complemente o conteúdo.  
+    Pegue os insights da pesquisa e crie uma publicação para {social_network} que seja impossível de ignorar! 
+    Fale sobre {content} no contexto de {topic} de um jeito que pareça uma conversa autêntica, 
+    com um tom {tone} que combine com o público ({target_public}). 
+    Use storytelling para prender a atenção, acrescente emojis ou perguntas para engajar e sugira um visual que complemente a vibe. 
+    No final, inclua uma descrição de imagem que faça o post ainda mais acessível e atraente.
   agent: reporting_analyst
   expected_output: >
-    O resultado deve estar no formato de um arquivo Markdown (.md), estruturado da seguinte forma:
+    Um arquivo Markdown (.md) com a seguinte estrutura:
 
-    # Publicação  
-    {texto_gerado_da_publicação}  
+    # Publicação para {social_network}  
+    {texto_gerado_da_publicação_e_chamadas_à_ação}  
 
     ---
 
     **🖼️ Descrição da Imagem:**  
-    {descrição_sugerida_para_a_imagem}
+    {descrição_vívida_que_complementa_o_post_e_aumenta_acessibilidade}
 
   dependencies: [research_task]
+  
