@@ -1,33 +1,35 @@
 research_task:
   description: >
-    Mergulhe no universo de {content} dentro de {topic} e descubra o que está movimentando esse tema! 
-    Busque avanços recentes, tendências que chamem atenção e histórias que possam encantar o público ({target_public}). 
-    Pense em como essas informações podem brilhar em uma publicação para {social_network}, com um tom {tone} que conecte e engaje.
+    Explore de forma curiosa e aberta o universo de {content} dentro de {topic}. 
+    Vá além dos dados: busque histórias reais, curiosidades inesperadas e vozes autênticas que estão moldando esse tema. 
+    Priorize fontes que tragam perspectivas humanas e experiências diretas. 
+    Reflita como isso poderia inspirar ou emocionar o público ({target_public}) em {social_network}, mantendo um tom {tone} que gere conexão genuína.
   agent: researcher
   expected_output: >
-    Um resumo vibrante com os principais destaques sobre {content} em {topic}, 
-    incluindo histórias cativantes, dados curiosos e fontes confiáveis. 
-    O conteúdo deve ser fácil de transformar em uma publicação para {social_network}, 
-    já considerando o tom {tone} e as preferências do público ({target_public}).
+    Um texto envolvente com os principais destaques sobre {content} em {topic}, 
+    que combine descobertas recentes com histórias inspiradoras ou surpreendentes. 
+    Sempre que possível, inclua trechos de falas, experiências ou casos reais que tragam calor humano. 
+    O conteúdo deve ser informal na medida certa, como se preparasse o terreno para uma conversa instigante em {social_network}, 
+    já adaptado ao tom {tone} e ao estilo do público ({target_public}).
 
 reporting_task:
   description: >
-    Pegue os insights da pesquisa e crie uma publicação para {social_network} que seja impossível de ignorar! 
-    Fale sobre {content} no contexto de {topic} de um jeito que pareça uma conversa autêntica, 
-    com um tom {tone} que combine com o público ({target_public}). 
-    Use storytelling para prender a atenção, acrescente emojis ou perguntas para engajar e sugira um visual que complemente a vibe. 
-    No final, inclua uma descrição de imagem que faça o post ainda mais acessível e atraente.
+    Com base nos insights coletados, crie uma publicação para {social_network} que pareça escrita por uma pessoa apaixonada pelo tema. 
+    Escreva como se estivesse contando algo empolgante para um amigo: use uma voz autêntica, próxima e com emoção. 
+    Traga o {content} no contexto de {topic} de forma humana, acessível e com toques pessoais. 
+    Use storytelling natural, emojis com propósito, perguntas que convidem à conversa e uma sugestão de imagem que complemente a energia da publicação. 
+    Dê preferência a frases curtas, gírias leves (se compatível com o público) e variações de ritmo.
   agent: reporting_analyst
   expected_output: >
     Um arquivo Markdown (.md) com a seguinte estrutura:
 
     # Publicação para {social_network}  
-    {texto_gerado_da_publicação_e_chamadas_à_ação}  
+    {texto fluido e empático, com chamadas à ação que parecem espontâneas}  
 
     ---
 
     **🖼️ Descrição da Imagem:**  
-    {descrição_vívida_que_complementa_o_post_e_aumenta_acessibilidade}
+    {descrição sensorial que complemente o conteúdo e ajude a imaginar o cenário do post}
 
   dependencies: [research_task]
   
