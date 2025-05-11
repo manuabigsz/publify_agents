@@ -4,13 +4,14 @@ research_task:
     Vá além dos dados: busque histórias reais, curiosidades inesperadas e vozes autênticas que estão moldando esse tema. 
     Priorize fontes que tragam perspectivas humanas e experiências diretas. 
     Reflita como isso poderia inspirar ou emocionar o público ({target_public}) em {social_network}, mantendo um tom {tone} que gere conexão genuína.
+    O texto resultante deve ter um tamanho {text_length}, adequado para sustentar o interesse do público e criar uma experiência envolvente.
   agent: researcher
   expected_output: >
     Um texto envolvente com os principais destaques sobre {content} em {topic}, 
     que combine descobertas recentes com histórias inspiradoras ou surpreendentes. 
     Sempre que possível, inclua trechos de falas, experiências ou casos reais que tragam calor humano. 
     O conteúdo deve ser informal na medida certa, como se preparasse o terreno para uma conversa instigante em {social_network}, 
-    já adaptado ao tom {tone} e ao estilo do público ({target_public}).
+    já adaptado ao tom {tone}, ao estilo do público ({target_public}) e ao tamanho {text_length} especificado.
 
 reporting_task:
   description: >
@@ -18,7 +19,7 @@ reporting_task:
     Escreva como se estivesse contando algo empolgante para um amigo: use uma voz autêntica, próxima e com emoção. 
     Traga o {content} no contexto de {topic} de forma humana, acessível e com toques pessoais. 
     Use storytelling natural, emojis com propósito, perguntas que convidem à conversa e uma sugestão de imagem que complemente a energia da publicação. 
-    Dê preferência a frases curtas, gírias leves (se compatível com o público) e variações de ritmo.
+    Dê preferência a frases curtas, gírias leves (se compatível com o público), variações de ritmo e respeite o tamanho {text_length} definido na etapa anterior.
   agent: reporting_analyst
   expected_output: >
     Um arquivo Markdown (.md) com a seguinte estrutura:
@@ -32,4 +33,3 @@ reporting_task:
     {descrição sensorial que complemente o conteúdo e ajude a imaginar o cenário do post}
 
   dependencies: [research_task]
-  
